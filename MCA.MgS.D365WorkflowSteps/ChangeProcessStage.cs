@@ -29,6 +29,12 @@ namespace MCA.MgS.D365WorkflowSteps
         [Output("Status")]
         public OutArgument<string> Status { get; set; }
 
+        [Output("ProcessId")]
+        public OutArgument<string> ProcessId { get; set; }
+
+        [Output("ProcessName")]
+        public OutArgument<string> ProcessName { get; set; }
+
         protected override void Execute(CodeActivityContext executionContext)
         {
             var context = executionContext.GetExtension<IWorkflowContext>();
@@ -75,6 +81,8 @@ namespace MCA.MgS.D365WorkflowSteps
                 qeBPF.Criteria.AddCondition(bpfRelatedLookupName, ConditionOperator.Equal, record.Id);
                 qeBPF.Criteria.AddCondition("statecode", ConditionOperator.Equal, 0);
                 var process = service.RetrieveMultiple(qeBPF).Entities.FirstOrDefault();
+                ProcessId.Set(executionContext, process.Id);
+                ProcessName.Set(executionContext, process.LogicalName);
 
                 var traversedPath = Convert.ToString(process["traversedpath"]);
 
