@@ -9,7 +9,7 @@ namespace MCA.MgS.D365WorkflowSteps
 {
     public class ChangeProcessStage : CodeActivity
     {
-        [Input("Record Id")]
+        [Input("Record Id or Url")]
         public InArgument<string> RecordId { get; set; }
 
         [Input("Entity Name")]
@@ -20,8 +20,8 @@ namespace MCA.MgS.D365WorkflowSteps
         public InArgument<string> StageName { get; set; }
 
         [Input("Business Process Flow")]
-        [Default("Opportunity Sales Process")]
-        public InArgument<string> BPF { get; set; }
+        [ReferenceTarget("workflow")]
+        public InArgument<EntityReference> BPF { get; set; }
 
         [Input("Going Backwards?")]
         public InArgument<bool> Backwards { get; set; }
@@ -34,6 +34,7 @@ namespace MCA.MgS.D365WorkflowSteps
 
         [Output("ProcessName")]
         public OutArgument<string> ProcessName { get; set; }
+
 
         protected override void Execute(CodeActivityContext executionContext)
         {
@@ -52,17 +53,21 @@ namespace MCA.MgS.D365WorkflowSteps
             //Opportunity
             try
             {
+
+                if (recId.StartsWith("http"))
+                {
+                    string parsedId = CrmUtility.GetRecordID(recId);
+                    recId = parsedId;
+                }
+
                 var qeOpp = new QueryExpression(recEntity);
                 qeOpp.ColumnSet.AddColumns(recEntityIdName);
                 qeOpp.Criteria.AddCondition(recEntityIdName, ConditionOperator.Equal, recId);
                 var record = service.RetrieveMultiple(qeOpp).Entities.FirstOrDefault();
 
+
                 //Workflow
-                var qeWorkflow = new QueryExpression("workflow");
-                qeWorkflow.ColumnSet.AddColumns("uniquename", "category", "type", "businessprocesstype");
-                qeWorkflow.Criteria.AddCondition("name", ConditionOperator.Equal, bpf);
-                qeWorkflow.Criteria.AddCondition("category", ConditionOperator.Equal, 4);
-                var workflow = service.RetrieveMultiple(qeWorkflow).Entities.FirstOrDefault();
+                var workflow = service.Retrieve(bpf.LogicalName, bpf.Id, new ColumnSet("uniquename"));
                 var bpfName = workflow["uniquename"].ToString();
 
                 //Stage
@@ -83,6 +88,7 @@ namespace MCA.MgS.D365WorkflowSteps
                 var process = service.RetrieveMultiple(qeBPF).Entities.FirstOrDefault();
                 ProcessId.Set(executionContext, process.Id);
                 ProcessName.Set(executionContext, process.LogicalName);
+
 
                 var traversedPath = Convert.ToString(process["traversedpath"]);
 

@@ -54,6 +54,23 @@ namespace MCA.MgS.D365WorkflowSteps
             return service.RetrieveMultiple(query).Entities.FirstOrDefault();
         }
 
+        public static string GetStringByValueUsingFetch(IOrganizationService service, string entityName, string attributeName, string filter, string fieldName, string fieldValue, string fetchFilters)
+        {
+            var fetchXml = $@"
+                    <fetch>
+                      <entity name='{entityName}'>
+                        <attribute name='{attributeName}' />
+                        <filter type='{filter}'>
+                          <condition attribute='{fieldName}' operator='eq' value='{fieldValue}'/>
+                          {fetchFilters}  
+                        </filter>
+                      </entity>
+                    </fetch>";
+
+            var result = service.RetrieveMultiple(new FetchExpression(fetchXml)).Entities.FirstOrDefault();
+
+            return result == null ? string.Empty : result.GetString(attributeName);
+        }
         public static string GetStringByValueUsingFetch(IOrganizationService service, string entityName, string attributeName, string filter, string fieldName, string fieldValue, string fetchFilters, string orderBy)
         {
             var fetchXml = $@"
@@ -72,6 +89,26 @@ namespace MCA.MgS.D365WorkflowSteps
 
             return result == null ? string.Empty : result.GetString(attributeName);
         }
+
+        public static int GetTotalCountByFetch(IOrganizationService service, string entityName, string attributeName, string filter, string fieldName, string fieldValue, string fetchFilters, string orderBy)
+        {
+            var fetchXml = $@"
+                    <fetch>
+                      <entity name='{entityName}'>
+                        <attribute name='{attributeName}' />
+                        <filter type='{filter}'>
+                          <condition attribute='{fieldName}' operator='eq' value='{fieldValue}'/>
+                          {fetchFilters}  
+                        </filter>
+                        {orderBy}
+                      </entity>
+                    </fetch>";
+
+            var result = service.RetrieveMultiple(new FetchExpression(fetchXml)).Entities.Count;
+            return result;
+        }
+
+
         public static Entity GetEntityByUsingFetch(IOrganizationService service, string entityName, string filter, string fetchFilters)
         {
             var fetchXml = $@"
@@ -88,5 +125,36 @@ namespace MCA.MgS.D365WorkflowSteps
             return result;
         }
 
+        public static string GetRecordID(string recordURL)
+        {
+
+            if (recordURL == null || recordURL == "")
+            {
+                return "";
+            }
+            string[] urlParts = recordURL.Split("?".ToArray());
+            string[] urlParams = urlParts[1].Split("&".ToCharArray());
+            string objectTypeCode = urlParams[0].Replace("etc=", "");
+            //  entityName =  sGetEntityNameFromCode(objectTypeCode, service);
+            string objectId = urlParams[1].Replace("id=", "");
+            return objectId;
+        }
+
+        public static Entity GetEntityByUsingFetch(IOrganizationService service, string entityName, string filter, string fetchFilters, string orderBy)
+        {
+            var fetchXml = $@"
+                    <fetch>
+                      <entity name='{entityName}'>
+                        <all-attributes/>
+                        <filter type='{filter}'>
+                          {fetchFilters}  
+                        </filter>
+                        {orderBy}
+                      </entity>
+                    </fetch>";
+
+            var result = service.RetrieveMultiple(new FetchExpression(fetchXml)).Entities.FirstOrDefault();
+            return result;
+        }
     }
 }

@@ -40,6 +40,9 @@ namespace MCA.MgS.D365WorkflowSteps
         [Input("Sort Order Descending")]
         public InArgument<bool> DescendingOrder { get; set; }
 
+        [Output("Total Count")]
+        public OutArgument<string> TotalCount { get; set; }
+
         [Output("Has Value")]
         public OutArgument<bool> HasValue { get; set; }
 
@@ -68,10 +71,8 @@ namespace MCA.MgS.D365WorkflowSteps
         [Output("Double Value")]
         public OutArgument<double> DoubleValue { get; set; }
 
-
         [Output("Integer Value")]
         public OutArgument<int> IntegerValue { get; set; }
-
 
         [Output("Money Value")]
         public OutArgument<Money> MoneyValue { get; set; }
@@ -99,6 +100,8 @@ namespace MCA.MgS.D365WorkflowSteps
             var filter = Filter.Get(context);
 
             var value = CrmUtility.GetStringByValueUsingFetch(service, entityName, resultField, filter, fieldName, fieldValue, fetchFilters, orderBy);
+            var totalCount = CrmUtility.GetTotalCountByFetch(service, entityName, resultField, filter, fieldName, fieldValue, fetchFilters, orderBy);
+            TotalCount.Set(context, totalCount.ToString());
 
             if (value == null)
                 return;
