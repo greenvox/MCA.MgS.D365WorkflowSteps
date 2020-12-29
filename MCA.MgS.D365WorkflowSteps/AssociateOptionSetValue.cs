@@ -18,7 +18,7 @@ namespace MCA.MgS.D365WorkflowSteps
         public InArgument<string> AttributeName { get; set; }
 
         [RequiredArgument]
-        [Input("Record Id")]
+        [Input("Record Id or Url")]
         public InArgument<string> RecordId { get; set; }
 
         [RequiredArgument]
@@ -38,6 +38,12 @@ namespace MCA.MgS.D365WorkflowSteps
                 var attributeName = AttributeName.Get(executionContext);
                 var recordId = RecordId.Get(executionContext);
                 var entityName = EntityName.Get(executionContext);
+
+                if (recordId.StartsWith("http"))
+                {
+                    string parsedId = CrmUtility.GetRecordID(recordId);
+                    recordId = parsedId;
+                }
 
                 var entity = service.Retrieve(entityName, Guid.Parse(recordId), new ColumnSet(attributeName));
 
