@@ -4,7 +4,7 @@ using Microsoft.Xrm.Sdk.Workflow;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Crm.Sdk.Messages;
 
-namespace SKWorkflowActivities
+namespace MCA.MgS.D365WorkflowSteps
 {
     public class ImportRecordsAction : CodeActivity
     {

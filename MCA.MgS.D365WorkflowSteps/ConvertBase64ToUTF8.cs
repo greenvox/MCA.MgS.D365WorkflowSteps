@@ -8,7 +8,7 @@ using Microsoft.Crm.Sdk.Messages;
 using System.Text;
 using System.IO;
 
-namespace SKWorkflowActivities
+namespace MCA.MgS.D365WorkflowSteps
 {
     public class ConvertBase64ToUTF8 : CodeActivity
     {

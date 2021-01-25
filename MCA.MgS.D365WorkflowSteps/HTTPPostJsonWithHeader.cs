@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using Microsoft.Xrm.Sdk.Workflow;
 
-namespace SKWorkflowActivities
+namespace MCA.MgS.D365WorkflowSteps
 {
     public enum ddHttpVerbs
     {

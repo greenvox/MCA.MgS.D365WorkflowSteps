@@ -918,7 +918,7 @@
                     },
                     {
                       "Key": "modifiedon",
-                      "Value": "2020-12-31T18:40:06Z"
+                      "Value": "2021-01-25T20:44:20Z"
                     },
                     {
                       "Key": "culture",
@@ -2029,7 +2029,7 @@
                   "_steps": [],
                   "LogicalName": "plugintype",
                   "PluginClassType": 2,
-                  "ConfigurationIsSupplied": true,
+                  "ConfigurationIsSupplied": false,
                   "Id": "beb43e83-d323-eb11-a813-0022481fd9aa",
                   "Attributes": [
                     {
@@ -2569,7 +2569,7 @@
                   "_steps": [],
                   "LogicalName": "plugintype",
                   "PluginClassType": 2,
-                  "ConfigurationIsSupplied": true,
+                  "ConfigurationIsSupplied": false,
                   "Id": "febe84b1-7251-eb11-a813-0022481fd9aa",
                   "Attributes": [
                     {
@@ -2775,6 +2775,42 @@
                     {
                       "Key": "createdon",
                       "Value": "2021-01-08T05:31:16Z"
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
+                  "ConfigurationIsSupplied": false,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "MCA.MgS.D365WorkflowSteps.GetStringByValueByFetch"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "MCA.MgS.D365WorkflowSteps.GetStringByValueByFetch"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.GetStringByValueByFetch"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MgS.D365WorkflowSteps"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
                     }
                   ],
                   "FormattedValues": [],

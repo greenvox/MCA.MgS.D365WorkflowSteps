@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConvertBase64ToUTF8.cs" />
+    <Compile Include="GetFileParts.cs" />
+    <Compile Include="GetNoteByAttribute.cs" />
+    <Compile Include="HTTPPostJsonWithHeader.cs" />
+    <Compile Include="ImportNoteFile.cs" />
     <Compile Include="ImportNoteFileToCrm.cs" />
     <Compile Include="AssociateOptionSetValue.cs" />
     <Compile Include="ChangeProcessStage.cs" />
@@ -64,8 +69,12 @@
     <Compile Include="HTTPPostJson.cs" />
     <Compile Include="HTTPJsonWithHeader.cs" />
     <Compile Include="HTTPPutJson.cs" />
+    <Compile Include="ImportParseAction.cs" />
+    <Compile Include="ImportRecordsAction.cs" />
+    <Compile Include="ImportTransformAction.cs" />
     <Compile Include="PostDocuSignRestAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharePointFormDigestAuth.cs" />
     <Compile Include="SharePointUploadFile.cs" />
     <Compile Include="SupportingClasses\BulkImportHelper.cs" />
     <Compile Include="SupportingClasses\CrmUtility.cs" />

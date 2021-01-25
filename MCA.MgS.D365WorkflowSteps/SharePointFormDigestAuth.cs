@@ -11,7 +11,7 @@ using System.Xml;
 using System.Xml.XPath;
 using System.Text;
 
-namespace SKWorkflowActivities
+namespace MCA.MgS.D365WorkflowSteps
 {
     public class SharePointFormDigestAuth : CodeActivity
     {
