@@ -25,7 +25,7 @@ namespace MCA.MgS.D365WorkflowSteps
 
         [Input("Going Backwards?")]
         public InArgument<bool> Backwards { get; set; }
-
+        
         [Output("Status")]
         public OutArgument<string> Status { get; set; }
 
@@ -34,7 +34,6 @@ namespace MCA.MgS.D365WorkflowSteps
 
         [Output("ProcessName")]
         public OutArgument<string> ProcessName { get; set; }
-
 
         protected override void Execute(CodeActivityContext executionContext)
         {
@@ -69,6 +68,14 @@ namespace MCA.MgS.D365WorkflowSteps
                 //Workflow
                 var workflow = service.Retrieve(bpf.LogicalName, bpf.Id, new ColumnSet("uniquename"));
                 var bpfName = workflow["uniquename"].ToString();
+                
+
+                //var qeWorkflow = new QueryExpression("workflow");
+                //qeWorkflow.ColumnSet.AddColumns("uniquename", "category", "type", "businessprocesstype");
+                //qeWorkflow.Criteria.AddCondition("name", ConditionOperator.Equal, bpf);
+                //qeWorkflow.Criteria.AddCondition("category", ConditionOperator.Equal, 4);
+                //var workflow = service.RetrieveMultiple(qeWorkflow).Entities.FirstOrDefault();
+                //var bpfName = workflow["uniquename"].ToString();
 
                 //Stage
                 var qeStage = new QueryExpression("processstage");
@@ -88,8 +95,6 @@ namespace MCA.MgS.D365WorkflowSteps
                 var process = service.RetrieveMultiple(qeBPF).Entities.FirstOrDefault();
                 ProcessId.Set(executionContext, process.Id);
                 ProcessName.Set(executionContext, process.LogicalName);
-
-
                 var traversedPath = Convert.ToString(process["traversedpath"]);
 
                 if (backwards)

@@ -62,7 +62,7 @@ namespace MCA.MgS.D365WorkflowSteps
                     return;
                 }
 
-                entity[attributeName] = result.GetOptionSetValue("attributevalue");
+                entity[attributeName] = new OptionSetValue(Convert.ToInt32(result["attributevalue"]));
 
                 service.Update(entity);
             }

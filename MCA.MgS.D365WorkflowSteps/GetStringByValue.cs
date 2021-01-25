@@ -4,38 +4,38 @@ using Microsoft.Xrm.Sdk;
 
 namespace MCA.MgS.D365WorkflowSteps
 {
-    public class GetSingleValueByFetch : CodeActivity
+    public class GetStringByValue : CodeActivity
     {
-        [RequiredArgument]
-        [Input("Search Value")]
+        [RequiredArgument] 
+        [Input("Search Value")] 
         public InArgument<string> FieldValue { get; set; }
 
         [RequiredArgument]
         [Input("Search Field")]
         public InArgument<string> FieldName { get; set; }
 
-        [RequiredArgument]
-        [Input("Search Entity")]
+        [RequiredArgument] 
+        [Input("Search Entity")] 
         public InArgument<string> FieldEntity { get; set; }
 
         [RequiredArgument]
-        [Input("Result Field")]
+        [Input("Result Field")] 
         public InArgument<string> ResultField { get; set; }
 
-        [RequiredArgument]
+        [RequiredArgument] 
         [Input("Filter Condition")]
         [Default("and")]
         [ArgumentDescription(@"and OR or")]
         public InArgument<string> Filter { get; set; }
 
-        [Input("Additional Fetch Conditions")]
+        [Input("Additional Fetch Conditions")] 
         [ArgumentDescription(@"<condition attribute='createdon' operator='last-x-hours' value='1' />")]
         public InArgument<string> FetchFilters { get; set; }
 
         [Input("Order By")]
         [Default("createdon")]
         public InArgument<string> OrderBy { get; set; }
-
+        
         [Input("Sort Order Descending")]
         public InArgument<bool> DescendingOrder { get; set; }
 
@@ -65,6 +65,7 @@ namespace MCA.MgS.D365WorkflowSteps
             {
                 order = $@"<order attribute='{orderBy}' descending='{descendingOrder}' />";
             }
+
             var filter = Filter.Get(executionContext);
             var status = "Failure";
 

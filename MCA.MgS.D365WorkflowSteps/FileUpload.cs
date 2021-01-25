@@ -39,6 +39,9 @@ namespace MCA.MgS.D365WorkflowSteps
         [Input("entityname")]
         public InArgument<string> entityname { get; set; }
 
+        [Output("AnnotationId")]
+        public OutArgument<string> annotationid { get; set; }
+
         protected override void Execute(CodeActivityContext executionContext)
         {
             var context = executionContext.GetExtension<IWorkflowContext>();
@@ -68,7 +71,10 @@ namespace MCA.MgS.D365WorkflowSteps
                 FileName = fileName
             };
 
-            service.Create(annotation);
+            var response = service.Create(annotation);
+
+            annotationid.Set(executionContext, response.ToString());
+
         }
     }
 }

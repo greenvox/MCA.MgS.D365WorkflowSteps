@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Linq;
 using System.Activities;
 using Microsoft.Xrm.Sdk.Workflow;
 using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Query;
 using System.Net;
-using System.IO;
 using System.Xml.Linq;
+using System.IO;
 using System.Xml;
 using System.Xml.XPath;
 using System.Text;
@@ -49,7 +51,7 @@ namespace MCA.MgS.D365WorkflowSteps
         [Default("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36")]
         public InArgument<string> BrowserUserAgent { get; set; }
 
-        [Output("Response")]
+        [Output("SharePoint Url")]
         public OutArgument<string> Response { get; set; }
 
         protected override void Execute(CodeActivityContext executionContext)
@@ -72,7 +74,7 @@ namespace MCA.MgS.D365WorkflowSteps
             var stsEndpoint = "https://login.microsoftonline.us/extSTS.srf";
             if (browserHost.EndsWith("us"))
             {
-                stsEndpoint = "https://login.microsoftonline.us/extSTS.srf";
+            stsEndpoint = "https://login.microsoftonline.us/extSTS.srf";
             }
 
 
@@ -95,6 +97,7 @@ namespace MCA.MgS.D365WorkflowSteps
             Stream dataStream = req.GetRequestStream();
             dataStream.Write(byteArray, 0, byteArray.Length);
             dataStream.Close();
+
             WebResponse res = req.GetResponse();
 
             String responseString;

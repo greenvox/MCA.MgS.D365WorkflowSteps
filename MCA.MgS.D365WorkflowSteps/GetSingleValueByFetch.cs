@@ -5,7 +5,7 @@ using System;
 
 namespace MCA.MgS.D365WorkflowSteps
 {
-    public class GetStringByValue : CodeActivity
+    public class GetStringByValueByFetch : CodeActivity
     {
         [RequiredArgument]
         [Input("Search For Value")]
