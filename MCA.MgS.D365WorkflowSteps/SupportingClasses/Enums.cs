@@ -501,4 +501,28 @@ namespace MCA.MgS.D365WorkflowSteps
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Semicolon = 4,
     }
+    [System.Runtime.Serialization.DataContractAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "8.1.0.239")]
+    public enum EnableDuplicateDetection
+    {
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        No = 0,
+
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Yes = 1,
+    }
+
+    [System.Runtime.Serialization.DataContractAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "8.1.0.239")]
+    public enum FileTypeCode
+    {
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        CSV = 0,
+
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        XML = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        XLS = 3
+    }
 }

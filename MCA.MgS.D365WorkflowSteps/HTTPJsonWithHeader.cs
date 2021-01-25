@@ -9,13 +9,6 @@ using Microsoft.Xrm.Sdk.Workflow;
 
 namespace MCA.MgS.D365WorkflowSteps
 {
-    public enum ddHttpVerbs
-    {
-        GET,
-        POST,
-        PUT,
-        PATCH
-    }
     public class HTTPJsonWithHeader : CodeActivity
     {
         /// <summary>

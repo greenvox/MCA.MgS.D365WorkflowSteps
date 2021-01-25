@@ -2029,114 +2029,6 @@
                   "_steps": [],
                   "LogicalName": "plugintype",
                   "PluginClassType": 2,
-                  "ConfigurationIsSupplied": false,
-                  "Id": "beb43e83-d323-eb11-a813-0022481fd9aa",
-                  "Attributes": [
-                    {
-                      "Key": "name",
-                      "Value": "MCA.MgS.D365WorkflowSteps.HTTPJsonWithCommonHeaders"
-                    },
-                    {
-                      "Key": "friendlyname",
-                      "Value": "MCA.MgS.D365WorkflowSteps.HTTPJsonWithCommonHeaders"
-                    },
-                    {
-                      "Key": "typename",
-                      "Value": "MCA.MgS.D365WorkflowSteps.HTTPJsonWithCommonHeaders"
-                    },
-                    {
-                      "Key": "workflowactivitygroupname",
-                      "Value": "MCA.MgS.D365WorkflowSteps"
-                    },
-                    {
-                      "Key": "customizationlevel",
-                      "Value": {"$type":"System.Int32","$value":1}
-                    },
-                    {
-                      "Key": "pluginassemblyid",
-                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","Name":"MCA.MgS.D365WorkflowSteps","KeyAttributes":[]}
-                    },
-                    {
-                      "Key": "organizationid",
-                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"84dff74b-13d2-4744-abf3-63ed3cb14967"},"LogicalName":"organization","KeyAttributes":[]}
-                    },
-                    {
-                      "Key": "assemblyname",
-                      "Value": "MCA.MgS.D365WorkflowSteps"
-                    },
-                    {
-                      "Key": "ismanaged",
-                      "Value": {"$type":"System.Boolean","$value":false}
-                    },
-                    {
-                      "Key": "customworkflowactivityinfo",
-                      "Value": "\u003c?xml version=\u00221.0\u0022 encoding=\u0022utf-16\u0022?\u003e\r\n\u003cSandboxCustomActivityInfo xmlns:xsd=\u0022http://www.w3.org/2001/XMLSchema\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003e\r\n  \u003cCustomActivityInfo\u003e\r\n    \u003cName\u003eHTTP Call With Common Headers\u003c/Name\u003e\r\n    \u003cPluginTypeId\u003ebeb43e83-d323-eb11-a813-0022481fd9aa\u003c/PluginTypeId\u003e\r\n    \u003cGroupName\u003eMCA.MGS.APITools\u003c/GroupName\u003e\r\n    \u003cIsNet4\u003etrue\u003c/IsNet4\u003e\r\n    \u003cTypeName\u003eMCA.MgS.D365WorkflowSteps.HTTPJsonWithCommonHeaders\u003c/TypeName\u003e\r\n    \u003cAssemblyName\u003eMCA.MgS.D365WorkflowSteps\u003c/AssemblyName\u003e\r\n    \u003cPublicKeyToken\u003ed950780adb3ef1ee\u003c/PublicKeyToken\u003e\r\n    \u003cCulture\u003eneutral\u003c/Culture\u003e\r\n    \u003cAssemblyVersion\u003e1.0.0.0\u003c/AssemblyVersion\u003e\r\n  \u003c/CustomActivityInfo\u003e\r\n  \u003cInputs\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eHeader: Accept\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eHeaderAccept\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cDefaultValue xsi:type=\u0022xsd:string\u0022\u003eapplication/json\u003c/DefaultValue\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eHeader: Content-Type\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eHeaderContentType\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cDefaultValue xsi:type=\u0022xsd:string\u0022\u003eapplication/json\u003c/DefaultValue\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eHeader: Authorization\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eHeaderAuthorization\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eHeader: Host\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eHeaderHost\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eHeader: Origin\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eHeaderOrigin\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eHeader: Cache-Control\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eHeaderCacheControl\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eHeader: User-Agent\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eHeaderUserAgent\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eHeader: Accept-Encoding\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eHeaderAcceptEncoding\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eMethod\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003etrue\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eMethod\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eService URL (Can have parameters)\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003etrue\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eServiceUrl\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eJSON Body\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eJsonBody\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n  \u003c/Inputs\u003e\r\n  \u003cOutputs\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eResponse\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eResponse\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n  \u003c/Outputs\u003e\r\n  \u003cAssemblyQualifiedName\u003eMCA.MgS.D365WorkflowSteps.HTTPJsonWithCommonHeaders, MCA.MgS.D365WorkflowSteps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d950780adb3ef1ee\u003c/AssemblyQualifiedName\u003e\r\n  \u003cValidationError /\u003e\r\n\u003c/SandboxCustomActivityInfo\u003e"
-                    },
-                    {
-                      "Key": "solutionid",
-                      "Value": {"$type":"System.Guid","$value":"fd140aae-4df4-11dd-bd17-0019b9312238"}
-                    },
-                    {
-                      "Key": "publickeytoken",
-                      "Value": "d950780adb3ef1ee"
-                    },
-                    {
-                      "Key": "plugintypeid",
-                      "Value": {"$type":"System.Guid","$value":"beb43e83-d323-eb11-a813-0022481fd9aa"}
-                    },
-                    {
-                      "Key": "major",
-                      "Value": {"$type":"System.Int32","$value":1}
-                    },
-                    {
-                      "Key": "createdby",
-                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"5f5a7e7a-ac5c-ea11-a813-000d3a4d53c3"},"LogicalName":"systemuser","Name":"Sarfraz Khan","KeyAttributes":[]}
-                    },
-                    {
-                      "Key": "minor",
-                      "Value": {"$type":"System.Int32","$value":0}
-                    },
-                    {
-                      "Key": "plugintypeidunique",
-                      "Value": {"$type":"System.Guid","$value":"02f488b9-d819-47cf-8da9-515dfc6cd2b8"}
-                    },
-                    {
-                      "Key": "componentstate",
-                      "Value": {"$type":"Microsoft.Xrm.Sdk.OptionSetValue, Microsoft.Xrm.Sdk","Value":{"$type":"System.Int32","$value":0}}
-                    },
-                    {
-                      "Key": "modifiedon",
-                      "Value": "2020-11-11T04:16:39Z"
-                    },
-                    {
-                      "Key": "culture",
-                      "Value": "neutral"
-                    },
-                    {
-                      "Key": "modifiedby",
-                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"5f5a7e7a-ac5c-ea11-a813-000d3a4d53c3"},"LogicalName":"systemuser","Name":"Sarfraz Khan","KeyAttributes":[]}
-                    },
-                    {
-                      "Key": "version",
-                      "Value": "1.0.0.0"
-                    },
-                    {
-                      "Key": "isworkflowactivity",
-                      "Value": {"$type":"System.Boolean","$value":true}
-                    },
-                    {
-                      "Key": "createdon",
-                      "Value": "2020-11-11T04:08:17Z"
-                    }
-                  ],
-                  "FormattedValues": [],
-                  "RelatedEntities": [],
-                  "KeyAttributes": []
-                },
-                {
-                  "_steps": [],
-                  "LogicalName": "plugintype",
-                  "PluginClassType": 2,
                   "ConfigurationIsSupplied": true,
                   "Id": "fbdbc3db-5b34-eb11-a813-000d3a5465d8",
                   "Attributes": [
@@ -2569,114 +2461,6 @@
                   "_steps": [],
                   "LogicalName": "plugintype",
                   "PluginClassType": 2,
-                  "ConfigurationIsSupplied": false,
-                  "Id": "febe84b1-7251-eb11-a813-0022481fd9aa",
-                  "Attributes": [
-                    {
-                      "Key": "name",
-                      "Value": "Import Server File To CRM"
-                    },
-                    {
-                      "Key": "friendlyname",
-                      "Value": "Import Server File To CRM"
-                    },
-                    {
-                      "Key": "typename",
-                      "Value": "MCA.MgS.D365WorkflowSteps.ImportServerFileToCrm"
-                    },
-                    {
-                      "Key": "workflowactivitygroupname",
-                      "Value": "MCA.MGS.WorkflowTools"
-                    },
-                    {
-                      "Key": "customizationlevel",
-                      "Value": {"$type":"System.Int32","$value":1}
-                    },
-                    {
-                      "Key": "pluginassemblyid",
-                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","Name":"MCA.MgS.D365WorkflowSteps","KeyAttributes":[]}
-                    },
-                    {
-                      "Key": "organizationid",
-                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"84dff74b-13d2-4744-abf3-63ed3cb14967"},"LogicalName":"organization","KeyAttributes":[]}
-                    },
-                    {
-                      "Key": "assemblyname",
-                      "Value": "MCA.MgS.D365WorkflowSteps"
-                    },
-                    {
-                      "Key": "ismanaged",
-                      "Value": {"$type":"System.Boolean","$value":false}
-                    },
-                    {
-                      "Key": "customworkflowactivityinfo",
-                      "Value": "\u003c?xml version=\u00221.0\u0022 encoding=\u0022utf-16\u0022?\u003e\r\n\u003cSandboxCustomActivityInfo xmlns:xsd=\u0022http://www.w3.org/2001/XMLSchema\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003e\r\n  \u003cCustomActivityInfo\u003e\r\n    \u003cName\u003eImport Server File To CRM\u003c/Name\u003e\r\n    \u003cPluginTypeId\u003efebe84b1-7251-eb11-a813-0022481fd9aa\u003c/PluginTypeId\u003e\r\n    \u003cGroupName\u003eMCA.MGS.WorkflowTools\u003c/GroupName\u003e\r\n    \u003cIsNet4\u003etrue\u003c/IsNet4\u003e\r\n    \u003cTypeName\u003eMCA.MgS.D365WorkflowSteps.ImportServerFileToCrm\u003c/TypeName\u003e\r\n    \u003cAssemblyName\u003eMCA.MgS.D365WorkflowSteps\u003c/AssemblyName\u003e\r\n    \u003cPublicKeyToken\u003ed950780adb3ef1ee\u003c/PublicKeyToken\u003e\r\n    \u003cCulture\u003eneutral\u003c/Culture\u003e\r\n    \u003cAssemblyVersion\u003e1.0.0.0\u003c/AssemblyVersion\u003e\r\n  \u003c/CustomActivityInfo\u003e\r\n  \u003cInputs\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eImport Map Id\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003etrue\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eImportMapId\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eFile Path (on-premise server)\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003etrue\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eRelativePath\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cDefaultValue xsi:type=\u0022xsd:string\u0022\u003ec:\\\\\\server01\\\\export.csv\u003c/DefaultValue\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eImport Name\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003etrue\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eImportName\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cDefaultValue xsi:type=\u0022xsd:string\u0022\u003eMy Data Import\u003c/DefaultValue\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n  \u003c/Inputs\u003e\r\n  \u003cOutputs\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eResponse\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eResponse\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n  \u003c/Outputs\u003e\r\n  \u003cAssemblyQualifiedName\u003eMCA.MgS.D365WorkflowSteps.ImportServerFileToCrm, MCA.MgS.D365WorkflowSteps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d950780adb3ef1ee\u003c/AssemblyQualifiedName\u003e\r\n  \u003cValidationError /\u003e\r\n\u003c/SandboxCustomActivityInfo\u003e"
-                    },
-                    {
-                      "Key": "solutionid",
-                      "Value": {"$type":"System.Guid","$value":"fd140aae-4df4-11dd-bd17-0019b9312238"}
-                    },
-                    {
-                      "Key": "publickeytoken",
-                      "Value": "d950780adb3ef1ee"
-                    },
-                    {
-                      "Key": "plugintypeid",
-                      "Value": {"$type":"System.Guid","$value":"febe84b1-7251-eb11-a813-0022481fd9aa"}
-                    },
-                    {
-                      "Key": "major",
-                      "Value": {"$type":"System.Int32","$value":1}
-                    },
-                    {
-                      "Key": "createdby",
-                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"5f5a7e7a-ac5c-ea11-a813-000d3a4d53c3"},"LogicalName":"systemuser","Name":"Sarfraz Khan","KeyAttributes":[]}
-                    },
-                    {
-                      "Key": "minor",
-                      "Value": {"$type":"System.Int32","$value":0}
-                    },
-                    {
-                      "Key": "plugintypeidunique",
-                      "Value": {"$type":"System.Guid","$value":"d24f2c6c-f71c-419c-997e-d2106b7dd519"}
-                    },
-                    {
-                      "Key": "componentstate",
-                      "Value": {"$type":"Microsoft.Xrm.Sdk.OptionSetValue, Microsoft.Xrm.Sdk","Value":{"$type":"System.Int32","$value":0}}
-                    },
-                    {
-                      "Key": "modifiedon",
-                      "Value": "2021-01-08T05:51:41Z"
-                    },
-                    {
-                      "Key": "culture",
-                      "Value": "neutral"
-                    },
-                    {
-                      "Key": "modifiedby",
-                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"5f5a7e7a-ac5c-ea11-a813-000d3a4d53c3"},"LogicalName":"systemuser","Name":"Sarfraz Khan","KeyAttributes":[]}
-                    },
-                    {
-                      "Key": "version",
-                      "Value": "1.0.0.0"
-                    },
-                    {
-                      "Key": "isworkflowactivity",
-                      "Value": {"$type":"System.Boolean","$value":true}
-                    },
-                    {
-                      "Key": "createdon",
-                      "Value": "2021-01-08T05:31:08Z"
-                    }
-                  ],
-                  "FormattedValues": [],
-                  "RelatedEntities": [],
-                  "KeyAttributes": []
-                },
-                {
-                  "_steps": [],
-                  "LogicalName": "plugintype",
-                  "PluginClassType": 2,
                   "ConfigurationIsSupplied": true,
                   "Id": "f7f4ddb8-7251-eb11-a813-0022481fd9aa",
                   "Attributes": [
@@ -2785,20 +2569,416 @@
                   "_steps": [],
                   "LogicalName": "plugintype",
                   "PluginClassType": 2,
+                  "ConfigurationIsSupplied": true,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "Get String By Value By Fetch"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "Get String By Value By Fetch"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.GetStringByValueByFetch"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MGS.WorkflowTools"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
+                  "ConfigurationIsSupplied": true,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "HTTP Json With Common Headers"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "HTTP Json With Common Headers"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.HTTPJsonWithCommonHeaders"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MGS.APITools"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
+                  "ConfigurationIsSupplied": true,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "Get File Parts"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "Get File Parts"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.GetFileParts"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MGS.ImportTools"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
+                  "ConfigurationIsSupplied": true,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "Get Note By Attribute"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "Get Note By Attribute"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.GetNoteByAttribute"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MGS.SearchTools"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
+                  "ConfigurationIsSupplied": true,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "HTTP Post Json With Header"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "HTTP Post Json With Header"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.HTTPPostJsonWithHeader"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MGS.APITools"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
+                  "ConfigurationIsSupplied": true,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "Import Note File"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "Import Note File"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.ImportNoteFile"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MGS.WorkflowTools"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
+                  "ConfigurationIsSupplied": true,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "Import Parse Action"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "Import Parse Action"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.ImportParseAction"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MGS.ImportTools"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
+                  "ConfigurationIsSupplied": true,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "Import Transform Action"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "Import Transform Action"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.ImportTransformAction"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MGS.ImportTools"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
+                  "ConfigurationIsSupplied": true,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "Import Records Action"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "Import Records Action"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.ImportRecordsAction"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MGS.ImportTools"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
+                  "ConfigurationIsSupplied": true,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "SharePoint Form Digest Auth"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "SharePoint Form Digest Auth"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.SharePointFormDigestAuth"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MGS.ImportTools"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
+                  "ConfigurationIsSupplied": true,
+                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Attributes": [
+                    {
+                      "Key": "name",
+                      "Value": "Convert Base64 To UTF8"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "Convert Base64 To UTF8"
+                    },
+                    {
+                      "Key": "typename",
+                      "Value": "MCA.MgS.D365WorkflowSteps.ConvertBase64ToUTF8"
+                    },
+                    {
+                      "Key": "workflowactivitygroupname",
+                      "Value": "MCA.MGS.ImportTools"
+                    },
+                    {
+                      "Key": "customizationlevel",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "pluginassemblyid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"6545d57c-bc22-eb11-a813-0022481fd9aa"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                    }
+                  ],
+                  "FormattedValues": [],
+                  "RelatedEntities": [],
+                  "KeyAttributes": []
+                },
+                {
+                  "_steps": [],
+                  "LogicalName": "plugintype",
+                  "PluginClassType": 2,
                   "ConfigurationIsSupplied": false,
                   "Id": "00000000-0000-0000-0000-000000000000",
                   "Attributes": [
                     {
                       "Key": "name",
-                      "Value": "MCA.MgS.D365WorkflowSteps.GetStringByValueByFetch"
-                    },
-                    {
-                      "Key": "friendlyname",
-                      "Value": "MCA.MgS.D365WorkflowSteps.GetStringByValueByFetch"
+                      "Value": "MCA.MgS.D365WorkflowSteps.ImportServerFileToCrm"
                     },
                     {
                       "Key": "typename",
-                      "Value": "MCA.MgS.D365WorkflowSteps.GetStringByValueByFetch"
+                      "Value": "MCA.MgS.D365WorkflowSteps.ImportServerFileToCrm"
+                    },
+                    {
+                      "Key": "friendlyname",
+                      "Value": "MCA.MgS.D365WorkflowSteps.ImportServerFileToCrm"
                     },
                     {
                       "Key": "workflowactivitygroupname",
