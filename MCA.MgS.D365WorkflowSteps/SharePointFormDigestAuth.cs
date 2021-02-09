@@ -201,23 +201,6 @@ namespace MCA.MgS.D365WorkflowSteps
             HeaderCookies.Set(executionContext, cookies.GetCookieHeader(new Uri(restUrl3)));
             HeaderXRequestDigest.Set(executionContext, formDigest);
             return;
-            ////Rest Call 2
-            //var restUrl = string.Format("{0}/sites/{sitetitleinurl}/_api/Web/GetFileByServerRelativeUrl(‘/sites/{sitetitleinurl}/Shared Documents/PPM Actuals & Forecasts/Approved Actuals (QV data).xlsx’)/$value", endPoint);
-            //var req = (HttpWebRequest)WebRequest.Create(restUrl);
-            //req.CookieContainer = cookies;
-            ////req.CookieContainer.Add(resp.Cookies);
-            //req.Method = "GET";
-            //req.Accept = "application/json; odata=verbose";
-            //req.ContentType = "application/json;odata=verbose";
-            //req.Headers.Add("X-RequestDigest", formDigest);
-            ////req.Headers.Add("Cookie", resp.Cookies[0].Value);
-            ////req.Headers.Add("Cookie", resp.Cookies[1].Value);
-            //var resp = (HttpWebResponse)req.GetResponse();
-            //Console.WriteLine("Read Complete.");
-            //Console.ReadLine();
-            //var respStr = new StreamReader(resp.GetResponseStream()).ReadToEnd();
-            //Console.WriteLine(respStr);
-            //Console.ReadLine();
 
         }
     }

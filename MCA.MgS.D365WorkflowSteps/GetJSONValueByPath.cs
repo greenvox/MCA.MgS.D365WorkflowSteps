@@ -88,12 +88,6 @@ namespace MCA.MgS.D365WorkflowSteps
             JToken pathValue = jValue.SelectToken(valuePath);
 
             // name of all products enumerated
-            //IEnumerable<JToken> jResult = jValue.SelectTokens(valuePath);
-
-            //foreach (JToken item in jResult)
-            //{
-            //    Console.WriteLine(item);
-            //}
 
             var value = Convert.ToString(pathValue);
             if (value == null)
