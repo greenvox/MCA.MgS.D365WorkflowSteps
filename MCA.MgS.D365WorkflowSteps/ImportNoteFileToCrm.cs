@@ -25,6 +25,10 @@ namespace MCA.MgS.D365WorkflowSteps
         [Default("My Data Import")]
         public InArgument<string> ImportName { get; set; }
 
+        [RequiredArgument]
+        [Input("Dedupe")]
+        public InArgument<bool> Dedupe { get; set; }
+
         [Output("Response")]
         public OutArgument<string> Response { get; set; }
 
@@ -105,7 +109,7 @@ namespace MCA.MgS.D365WorkflowSteps
             importFile["datadelimitercode"] = new OptionSetValue((int)ImportFileDataDelimiterCode.DoubleQuote);
             importFile["processcode"] = new OptionSetValue((int)ImportFileProcessCode.Process);
             importFile["usesystemmap"] = false;
-            importFile["enableduplicatedetection"] = true;
+            importFile["enableduplicatedetection"] = Dedupe.Get(executionContext);
             // Set the owner ID.				
             importFile["recordsownerid"] =
                 new EntityReference(SystemUser.EntityLogicalName, systemUserResponse.UserId);
