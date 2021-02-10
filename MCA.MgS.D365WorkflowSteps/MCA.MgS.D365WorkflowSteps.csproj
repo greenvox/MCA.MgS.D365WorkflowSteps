@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConvertBase64ToUTF8.cs" />
+    <Compile Include="GetAuditDetail.cs" />
     <Compile Include="GetFileParts.cs" />
     <Compile Include="GetNoteByAttribute.cs" />
     <Compile Include="HTTPPostJsonWithHeader.cs" />

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Messages;
+using Microsoft.Xrm.Sdk.Metadata;
 using Microsoft.Xrm.Sdk.Query;
 
 namespace MCA.MgS.D365WorkflowSteps
@@ -155,6 +157,28 @@ namespace MCA.MgS.D365WorkflowSteps
 
             var result = service.RetrieveMultiple(new FetchExpression(fetchXml)).Entities.FirstOrDefault();
             return result;
+        }
+
+        /// <summary>
+        ///This method will gives you the optionset text based on value 
+        /// </summary>
+        /// <param name="entityName"> Entity Name of otionset field </param>
+        /// <param name="fieldName">Optionset field Name</param>
+        /// <param name="optionSetValue"> Option Set Value</param>
+        /// <param name="service">Organization Service</param>
+        /// <returns></returns>
+
+        public string GetOptionSetTextUsingValue(string entityName, string fieldName, int optionSetValue, IOrganizationService service)
+        {
+
+            var attReq = new RetrieveAttributeRequest();
+            attReq.EntityLogicalName = entityName;
+            attReq.LogicalName = fieldName;
+            attReq.RetrieveAsIfPublished = true;
+            var attResponse = (RetrieveAttributeResponse)service.Execute(attReq);
+            var attMetadata = (EnumAttributeMetadata)attResponse.AttributeMetadata;
+            return attMetadata.OptionSet.Options.Where(x => x.Value == optionSetValue).FirstOrDefault().Label.UserLocalizedLabel.Label;
+
         }
     }
 }
