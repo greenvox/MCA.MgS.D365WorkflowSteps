@@ -13,7 +13,7 @@ using Microsoft.Xrm.Sdk.Workflow;
 
 namespace MCA.MgS.D365WorkflowSteps
 {
-    class GetAuditDetail : CodeActivity
+    public class GetAuditDetail : CodeActivity
     {
         [RequiredArgument]
         [Input("AuditId")]
