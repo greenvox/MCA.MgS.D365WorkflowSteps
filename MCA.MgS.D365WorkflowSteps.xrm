@@ -3,7 +3,7 @@
     {
       "OrganizationURL": "https://mcaconnectdev.crm.dynamics.com",
       "HomeRealmUri": "",
-      "OrganizationVersion": "9.2.20123.153",
+      "OrganizationVersion": "9.2.21012.151",
       "MFAAppId": "",
       "MFAReturnUrl": "",
       "ConnectionType": 1,
@@ -3641,7 +3641,7 @@
                   "LogicalName": "plugintype",
                   "PluginClassType": 2,
                   "ConfigurationIsSupplied": true,
-                  "Id": "00000000-0000-0000-0000-000000000000",
+                  "Id": "dcca2df0-fa6b-eb11-a812-000d3a9e0d49",
                   "Attributes": [
                     {
                       "Key": "name",
@@ -3665,7 +3665,79 @@
                     },
                     {
                       "Key": "pluginassemblyid",
-                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"196dc97f-525f-eb11-a812-000d3a8e0b27"},"LogicalName":"pluginassembly","KeyAttributes":[]}
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"196dc97f-525f-eb11-a812-000d3a8e0b27"},"LogicalName":"pluginassembly","Name":"MCA.MgS.D365WorkflowSteps","KeyAttributes":[]}
+                    },
+                    {
+                      "Key": "organizationid",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"84dff74b-13d2-4744-abf3-63ed3cb14967"},"LogicalName":"organization","KeyAttributes":[]}
+                    },
+                    {
+                      "Key": "assemblyname",
+                      "Value": "MCA.MgS.D365WorkflowSteps"
+                    },
+                    {
+                      "Key": "ismanaged",
+                      "Value": {"$type":"System.Boolean","$value":false}
+                    },
+                    {
+                      "Key": "customworkflowactivityinfo",
+                      "Value": "\u003c?xml version=\u00221.0\u0022 encoding=\u0022utf-16\u0022?\u003e\r\n\u003cSandboxCustomActivityInfo xmlns:xsd=\u0022http://www.w3.org/2001/XMLSchema\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003e\r\n  \u003cCustomActivityInfo\u003e\r\n    \u003cName\u003eMCA.MgS.D365WorkflowSteps.GetAuditDetail\u003c/Name\u003e\r\n    \u003cPluginTypeId\u003edcca2df0-fa6b-eb11-a812-000d3a9e0d49\u003c/PluginTypeId\u003e\r\n    \u003cGroupName\u003eMCA.MgS.D365WorkflowSteps\u003c/GroupName\u003e\r\n    \u003cIsNet4\u003etrue\u003c/IsNet4\u003e\r\n    \u003cTypeName\u003eMCA.MgS.D365WorkflowSteps.GetAuditDetail\u003c/TypeName\u003e\r\n    \u003cAssemblyName\u003eMCA.MgS.D365WorkflowSteps\u003c/AssemblyName\u003e\r\n    \u003cPublicKeyToken\u003ed950780adb3ef1ee\u003c/PublicKeyToken\u003e\r\n    \u003cCulture\u003eneutral\u003c/Culture\u003e\r\n    \u003cAssemblyVersion\u003e1.0.0.0\u003c/AssemblyVersion\u003e\r\n  \u003c/CustomActivityInfo\u003e\r\n  \u003cInputs\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eAuditId\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003etrue\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eAuditId\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n  \u003c/Inputs\u003e\r\n  \u003cOutputs\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eField\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eField\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eNew Value\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eNewValue\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eOld Value\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eOldValue\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eAudit Type\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eAuditType\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eNew Role Privileges\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eNewRolePrivileges\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eOld Role Privileges\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eOldRolePrivileges\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eRelationship Name\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eRelationshipName\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eTarget Records\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eTargetRecords\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eNew Privileges\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eNewPrivileges\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eOld Privileges\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eOldPrivileges\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003ePrincipal Name\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003ePrincipalName\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eAccess Time\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eAccessTime\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eInterval\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eInterval\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n    \u003cCustomActivityParameterInfo\u003e\r\n      \u003cName\u003eSerialized Reponse\u003c/Name\u003e\r\n      \u003cTypeName\u003eSystem.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\u003c/TypeName\u003e\r\n      \u003cIsInOutArgument\u003efalse\u003c/IsInOutArgument\u003e\r\n      \u003cWorkflowAttributeType\u003eBoolean\u003c/WorkflowAttributeType\u003e\r\n      \u003cRequired\u003efalse\u003c/Required\u003e\r\n      \u003cDependencyPropertyName\u003eSerializedResponse\u003c/DependencyPropertyName\u003e\r\n      \u003cEntityNames /\u003e\r\n      \u003cIdentifierDefinition xsi:nil=\u0022true\u0022 /\u003e\r\n    \u003c/CustomActivityParameterInfo\u003e\r\n  \u003c/Outputs\u003e\r\n  \u003cAssemblyQualifiedName\u003eMCA.MgS.D365WorkflowSteps.GetAuditDetail, MCA.MgS.D365WorkflowSteps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d950780adb3ef1ee\u003c/AssemblyQualifiedName\u003e\r\n  \u003cValidationError /\u003e\r\n\u003c/SandboxCustomActivityInfo\u003e"
+                    },
+                    {
+                      "Key": "solutionid",
+                      "Value": {"$type":"System.Guid","$value":"fd140aae-4df4-11dd-bd17-0019b9312238"}
+                    },
+                    {
+                      "Key": "publickeytoken",
+                      "Value": "d950780adb3ef1ee"
+                    },
+                    {
+                      "Key": "plugintypeid",
+                      "Value": {"$type":"System.Guid","$value":"dcca2df0-fa6b-eb11-a812-000d3a9e0d49"}
+                    },
+                    {
+                      "Key": "major",
+                      "Value": {"$type":"System.Int32","$value":1}
+                    },
+                    {
+                      "Key": "createdby",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"5f5a7e7a-ac5c-ea11-a813-000d3a4d53c3"},"LogicalName":"systemuser","Name":"Sarfraz Khan","KeyAttributes":[]}
+                    },
+                    {
+                      "Key": "minor",
+                      "Value": {"$type":"System.Int32","$value":0}
+                    },
+                    {
+                      "Key": "plugintypeidunique",
+                      "Value": {"$type":"System.Guid","$value":"a48a1e57-3740-47a8-9b85-22fd53343440"}
+                    },
+                    {
+                      "Key": "componentstate",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.OptionSetValue, Microsoft.Xrm.Sdk","Value":{"$type":"System.Int32","$value":0}}
+                    },
+                    {
+                      "Key": "modifiedon",
+                      "Value": "2021-02-15T07:15:04Z"
+                    },
+                    {
+                      "Key": "culture",
+                      "Value": "neutral"
+                    },
+                    {
+                      "Key": "modifiedby",
+                      "Value": {"$type":"Microsoft.Xrm.Sdk.EntityReference, Microsoft.Xrm.Sdk","Id":{"$type":"System.Guid","$value":"5f5a7e7a-ac5c-ea11-a813-000d3a4d53c3"},"LogicalName":"systemuser","Name":"Sarfraz Khan","KeyAttributes":[]}
+                    },
+                    {
+                      "Key": "version",
+                      "Value": "1.0.0.0"
+                    },
+                    {
+                      "Key": "isworkflowactivity",
+                      "Value": {"$type":"System.Boolean","$value":true}
+                    },
+                    {
+                      "Key": "createdon",
+                      "Value": "2021-02-10T23:51:57Z"
                     }
                   ],
                   "FormattedValues": [],
@@ -3694,7 +3766,7 @@
                 },
                 {
                   "Key": "modifiedon",
-                  "Value": "2021-02-10T23:14:40Z"
+                  "Value": "2021-02-15T07:13:14Z"
                 },
                 {
                   "Key": "createdon",
