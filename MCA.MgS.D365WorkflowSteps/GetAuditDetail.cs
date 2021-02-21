@@ -82,63 +82,98 @@ namespace MCA.MgS.D365WorkflowSteps
             string accessTime = string.Empty;
             string interval = string.Empty;
             string auditType = string.Empty;
+            string status = string.Empty;
 
             var auditDetailsRequest = new RetrieveAuditDetailsRequest();
             auditDetailsRequest.AuditId = Guid.Parse(auditId);
             var auditDetailsResponse = (RetrieveAuditDetailsResponse)service.Execute(auditDetailsRequest);
             var responseType = (auditDetailsResponse.AuditDetail.GetType()).ToString();
 
-            if (responseType == "Microsoft.Crm.Sdk.Messages.AttributeAuditDetail")
-            {
-                var auditDetail = (AttributeAuditDetail)auditDetailsResponse.AuditDetail;
-
-                var rawKey = auditDetail.NewValue.Attributes.FirstOrDefault().Key;
-                var rawNewValue = auditDetail.NewValue.Attributes.FirstOrDefault().Value;
-                var rawOldValue = auditDetail.OldValue.Attributes.FirstOrDefault().Value;
-
-                var valueType = rawNewValue.GetType().ToString();
-                if (valueType == "Microsoft.Xrm.Sdk.OptionSetValue" || valueType == "Microsoft.Xrm.Sdk.EntityReference")
+            try { 
+                if (responseType == "Microsoft.Crm.Sdk.Messages.AttributeAuditDetail")
                 {
-                    rawNewValue = auditDetail.NewValue.FormattedValues.FirstOrDefault().Value;
-                    rawOldValue = auditDetail.OldValue.FormattedValues.FirstOrDefault().Value;
-                }
+                    var auditDetail = (AttributeAuditDetail)auditDetailsResponse.AuditDetail;
+                    var rawKey = auditDetail.NewValue.Attributes.Keys.Count().ToString();
+                    var newVal = new StringBuilder();
+                    var oldVal = new StringBuilder();
+                    
+                    var nvc = auditDetail.NewValue.FormattedValues;
+                    var ovc = auditDetail.OldValue.FormattedValues;
+                    var nva = auditDetail.NewValue.Attributes;
+                    var ova = auditDetail.OldValue.Attributes;
 
-                newValue = rawNewValue.ToString();
-                oldValue = rawOldValue.ToString();
-                fieldKey = rawKey.ToString();
-            }
-            if (responseType == "Microsoft.Crm.Sdk.Messages.RolePrivilegeAuditDetail")
-            {
-                var auditDetail = (RolePrivilegeAuditDetail)auditDetailsResponse.AuditDetail;
-                newRolePrivileges = (auditDetail.NewRolePrivileges.FirstOrDefault().PrivilegeId).ToString();
-                oldRolePrivileges = (auditDetail.OldRolePrivileges.FirstOrDefault().PrivilegeId).ToString();
-            }
-            if (responseType == "Microsoft.Crm.Sdk.Messages.RelationshipAuditDetail")
-            {
-                var auditDetail = (RelationshipAuditDetail)auditDetailsResponse.AuditDetail;
-                relationshipName = auditDetail.RelationshipName.ToString();
-                var lstTargetRecords = auditDetail.TargetRecords.ToList();
-                StringBuilder tr = new StringBuilder();
-                foreach (var targetRecord in lstTargetRecords)
+                    var formattedTypes = new string[] { "DateTime", "OptionSetValue", "Money", "EntityReference", "Empty" };
+                    var keys = auditDetail.NewValue.Attributes.Keys;
+                    foreach (var key in keys)
+                    {
+                        string str;
+                        object obj;
+                        nva.TryGetValue(key, out obj);
+                        var nObj = (obj == null) ? obj.ToString() : "Empty";
+                        if (formattedTypes.Any(c => nObj.Contains(c)))
+                        {
+                            nvc.TryGetValue(key, out str);
+                            newVal.Append(key + ": " + str);
+                        }
+                        else
+                        {
+                            newVal.Append(key + ": " + obj.ToString());
+                        }
+                        newVal.AppendLine();
+
+                        ova.TryGetValue(key, out obj);
+                        var oObj = (obj != null) ? obj.ToString() : "Empty";
+                        if (formattedTypes.Any(c => oObj.Contains(c)))
+                        {
+                            ovc.TryGetValue(key, out str);
+                            oldVal.Append(key + ": " + str);
+                        }
+                        else
+                        {
+                            oldVal.Append(key + ": " + obj.ToString());
+                        }
+                        oldVal.AppendLine();
+                    }
+
+                    newValue = (newVal != null) ? newVal.ToString() : string.Empty;
+                    oldValue = (oldVal != null) ? oldVal.ToString() : string.Empty;
+                    fieldKey = rawKey.ToString();
+                }
+                if (responseType == "Microsoft.Crm.Sdk.Messages.RolePrivilegeAuditDetail")
                 {
-                    tr.Append(targetRecord.Name);
+                    var auditDetail = (RolePrivilegeAuditDetail)auditDetailsResponse.AuditDetail;
+                    newRolePrivileges = (auditDetail.NewRolePrivileges.FirstOrDefault().PrivilegeId).ToString();
+                    oldRolePrivileges = (auditDetail.OldRolePrivileges.FirstOrDefault().PrivilegeId).ToString();
                 }
-                targetRecords = tr.ToString();
-            }
-            if (responseType == "Microsoft.Crm.Sdk.Messages.ShareAuditDetail")
+                if (responseType == "Microsoft.Crm.Sdk.Messages.RelationshipAuditDetail")
+                {
+                    var auditDetail = (RelationshipAuditDetail)auditDetailsResponse.AuditDetail;
+                    relationshipName = auditDetail.RelationshipName.ToString();
+                    var lstTargetRecords = auditDetail.TargetRecords.ToList();
+                    StringBuilder tr = new StringBuilder();
+                    foreach (var targetRecord in lstTargetRecords)
+                    {
+                        tr.Append(targetRecord.Name);
+                    }
+                    targetRecords = tr.ToString();
+                }
+                if (responseType == "Microsoft.Crm.Sdk.Messages.ShareAuditDetail")
+                {
+                    var auditDetail = (ShareAuditDetail)auditDetailsResponse.AuditDetail;
+                    newPrivileges = auditDetail.NewPrivileges.ToString();
+                    oldPrivileges = auditDetail.OldPrivileges.ToString();
+                    principalName = (auditDetail.Principal.Name).ToString();
+                }
+                if (responseType == "Microsoft.Crm.Sdk.Messages.UserAccessAuditDetail")
+                {
+                    var auditDetail = (UserAccessAuditDetail)auditDetailsResponse.AuditDetail;
+                    accessTime = auditDetail.AccessTime.ToString();
+                    interval = auditDetail.Interval.ToString();
+                }
+            } catch (Exception ex)
             {
-                var auditDetail = (ShareAuditDetail)auditDetailsResponse.AuditDetail;
-                newPrivileges = auditDetail.NewPrivileges.ToString();
-                oldPrivileges = auditDetail.OldPrivileges.ToString();
-                principalName = (auditDetail.Principal.Name).ToString();
+                status = ex.Message;
             }
-            if (responseType == "Microsoft.Crm.Sdk.Messages.UserAccessAuditDetail")
-            {
-                var auditDetail = (UserAccessAuditDetail)auditDetailsResponse.AuditDetail;
-                accessTime = auditDetail.AccessTime.ToString();
-                interval = auditDetail.Interval.ToString();
-            }
-
             auditType = responseType.ToString().Replace("Microsoft.Crm.Sdk.Messages.","");
 
             var jsonRespObj = new
@@ -147,15 +182,16 @@ namespace MCA.MgS.D365WorkflowSteps
                 oldvalue = oldValue,
                 field = fieldKey,
                 audittype = auditType,
-                newpriv = newPrivileges,
-                oldpriv = oldPrivileges,
-                newrolepriv = newRolePrivileges,
-                oldrolepriv = oldRolePrivileges,
+                newprivileges = newPrivileges,
+                oldprivileges = oldPrivileges,
+                newroleprivileges = newRolePrivileges,
+                oldroleprivileges = oldRolePrivileges,
                 principalname = principalName,
                 targetrecords = targetRecords,
                 relationshipname = relationshipName,
                 accesstime = accessTime,
-                accessinterval = interval
+                accessinterval = interval,
+                status = status
             };
             var serializedResponse = JsonConvert.SerializeObject(jsonRespObj);
 
