@@ -42,41 +42,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConvertBase64ToUTF8.cs" />
-    <Compile Include="GetAuditDetail.cs" />
-    <Compile Include="GetFileParts.cs" />
-    <Compile Include="GetNoteByAttribute.cs" />
-    <Compile Include="HTTPPostJsonWithHeader.cs" />
-    <Compile Include="ImportNoteFile.cs" />
-    <Compile Include="ImportNoteFileToCrm.cs" />
-    <Compile Include="AssociateOptionSetValue.cs" />
-    <Compile Include="ChangeProcessStage.cs" />
-    <Compile Include="GetNoteParts.cs" />
-    <Compile Include="GetSingleValueByFetch.cs" />
-    <Compile Include="GetUsersOnPostMention.cs" />
-    <Compile Include="EmailUserOnPostMention.cs" />
-    <Compile Include="FileUpload.cs" />
-    <Compile Include="GetAccountByAttribute.cs" />
-    <Compile Include="GetAccountByFetch.cs" />
-    <Compile Include="GetContactByAttribute.cs" />
-    <Compile Include="GetJSONValueByPath.cs" />
-    <Compile Include="GetLeadByAttribute.cs" />
-    <Compile Include="GetOpportunityByAttribute.cs" />
-    <Compile Include="GetOpportunityProductByAttribute.cs" />
-    <Compile Include="GetProductByAttribute.cs" />
-    <Compile Include="GetStringByValue.cs" />
-    <Compile Include="GetUserByAttribute.cs" />
-    <Compile Include="HTTPJsonWithCommonHeaders.cs" />
-    <Compile Include="HTTPPostJson.cs" />
-    <Compile Include="HTTPJsonWithHeader.cs" />
-    <Compile Include="HTTPPutJson.cs" />
-    <Compile Include="ImportParseAction.cs" />
-    <Compile Include="ImportRecordsAction.cs" />
-    <Compile Include="ImportTransformAction.cs" />
-    <Compile Include="PostDocuSignRestAPI.cs" />
+    <Compile Include="Tools\ToolsWorkflow\ConvertBase64ToUTF8.cs" />
+    <Compile Include="Tools\Audit\GetAuditDetail.cs" />
+    <Compile Include="Tools\ToolsWorkflow\GetFileParts.cs" />
+    <Compile Include="Tools\ToolsSearch\GetNoteByAttribute.cs" />
+    <Compile Include="Tools\ToolsSearch\GetOpportunityClose.cs" />
+    <Compile Include="Tools\API\HTTPPostJsonWithHeader.cs" />
+    <Compile Include="Tools\ToolsImport\ImportNoteFile.cs" />
+    <Compile Include="Tools\ToolsImport\ImportNoteFileToCrm.cs" />
+    <Compile Include="Tools\ToolsWorkflow\AssociateOptionSetValue.cs" />
+    <Compile Include="Tools\ToolsWorkflow\ChangeProcessStage.cs" />
+    <Compile Include="Tools\ToolsWorkflow\GetNoteParts.cs" />
+    <Compile Include="Tools\ToolsSearch\GetSingleValueByFetch.cs" />
+    <Compile Include="Tools\ToolsWorkflow\GetUsersOnPostMention.cs" />
+    <Compile Include="Tools\ToolsWorkflow\EmailUserOnPostMention.cs" />
+    <Compile Include="Tools\ToolsWorkflow\FileUpload.cs" />
+    <Compile Include="Tools\ToolsSearch\GetAccountByAttribute.cs" />
+    <Compile Include="Tools\ToolsSearch\GetAccountByFetch.cs" />
+    <Compile Include="Tools\ToolsSearch\GetContactByAttribute.cs" />
+    <Compile Include="Tools\API\GetJSONValueByPath.cs" />
+    <Compile Include="Tools\ToolsSearch\GetLeadByAttribute.cs" />
+    <Compile Include="Tools\ToolsSearch\GetOpportunityByAttribute.cs" />
+    <Compile Include="Tools\ToolsSearch\GetOpportunityProductByAttribute.cs" />
+    <Compile Include="Tools\ToolsSearch\GetProductByAttribute.cs" />
+    <Compile Include="Tools\ToolsSearch\GetStringByValue.cs" />
+    <Compile Include="Tools\ToolsSearch\GetUserByAttribute.cs" />
+    <Compile Include="Tools\API\HTTPJsonWithCommonHeaders.cs" />
+    <Compile Include="Tools\API\HTTPPostJson.cs" />
+    <Compile Include="Tools\API\HTTPJsonWithHeader.cs" />
+    <Compile Include="Tools\API\HTTPPutJson.cs" />
+    <Compile Include="Tools\ToolsImport\ImportParseAction.cs" />
+    <Compile Include="Tools\ToolsImport\ImportRecordsAction.cs" />
+    <Compile Include="Tools\ToolsImport\ImportTransformAction.cs" />
+    <Compile Include="Tools\API\PostDocuSignRestAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SharePointFormDigestAuth.cs" />
-    <Compile Include="SharePointUploadFile.cs" />
+    <Compile Include="Tools\API\SharePointFormDigestAuth.cs" />
+    <Compile Include="Tools\API\SharePointUploadFile.cs" />
     <Compile Include="SupportingClasses\BulkImportHelper.cs" />
     <Compile Include="SupportingClasses\CrmUtility.cs" />
     <Compile Include="SupportingClasses\EntityExtensions.cs" />
@@ -97,5 +98,6 @@
   <ItemGroup>
     <None Include="MCA.MgS.D365WorkflowSteps.snk" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
