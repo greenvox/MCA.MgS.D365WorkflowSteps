@@ -21,7 +21,7 @@ namespace MCA.MgS.D365WorkflowSteps
 
             return service.RetrieveMultiple(query).Entities.FirstOrDefault()?.ToEntityReference();
         }
-        public static EntityReference GetCrmAdminUser(IOrganizationService service, string internalemailaddress)
+        public static EntityReference GetCrmUser(IOrganizationService service, string internalemailaddress)
         {
             var query = new QueryByAttribute(SystemUser.EntityLogicalName);
 

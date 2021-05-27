@@ -66,13 +66,13 @@ namespace MCA.MgS.D365WorkflowSteps
                 var htmlTemplate = $"" + message;
 
 
-                foreach (var user in recipients.Select(CrmUtility.CreateEntityReferenceFromString))
+                foreach (var user in recipients)
                 {
                     var fromActivityParty = new Entity("activityparty");
                     var toActivityParty = new Entity("activityparty");
 
-                    fromActivityParty["partyid"] = CrmUtility.GetCrmAdminUser(crmService, sender);
-                    toActivityParty["partyid"] = user;
+                    fromActivityParty["partyid"] = CrmUtility.GetCrmUser(crmService, sender);
+                    toActivityParty["partyid"] = CrmUtility.GetCrmUser(crmService, user);
 
                     var email = new Entity("email")
                     {
