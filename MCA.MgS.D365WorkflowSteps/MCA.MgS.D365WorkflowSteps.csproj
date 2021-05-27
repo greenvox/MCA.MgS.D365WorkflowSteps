@@ -86,6 +86,8 @@
     <Compile Include="SupportingClasses\SharePointUtility.cs" />
     <Compile Include="SupportingClasses\Utility.cs" />
     <Compile Include="SupportingClasses\WorkflowContextExtensions.cs" />
+    <Compile Include="Tools\ToolsWorkflow\PostUserTag.cs" />
+    <Compile Include="Tools\ToolsWorkflow\SendCustomEmail.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies">

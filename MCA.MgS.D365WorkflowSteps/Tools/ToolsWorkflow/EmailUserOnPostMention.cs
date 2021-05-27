@@ -60,7 +60,7 @@ namespace MCA.MgS.D365WorkflowSteps
                     tracingService.Trace($"Mention: {mention}");
                 }
 
-                var htmlTemplate = $"Click the following link to view the {regardingObjectId.LogicalName} record.<a href='{urlPrefix}{regardingObjectId.LogicalName}&id={regardingObjectId.Id}'>{fullName}</a>";
+                var htmlTemplate = $"Click the following link to view the {regardingObjectId.LogicalName} record.<a href='{urlPrefix}?&etc={regardingObjectId.LogicalName}&id={regardingObjectId.Id}'>{fullName}</a>";
 
                 tracingService.Trace($"Mentions: {mentions.Count}");
                 tracingService.Trace($"URL: {htmlTemplate}");
@@ -116,4 +116,3 @@ namespace MCA.MgS.D365WorkflowSteps
         }
     }
 }
-;

@@ -21,7 +21,14 @@ namespace MCA.MgS.D365WorkflowSteps
 
             return service.RetrieveMultiple(query).Entities.FirstOrDefault()?.ToEntityReference();
         }
+        public static EntityReference GetCrmAdminUser(IOrganizationService service, string internalemailaddress)
+        {
+            var query = new QueryByAttribute(SystemUser.EntityLogicalName);
 
+            query.AddAttributeValue("internalemailaddress", internalemailaddress);
+
+            return service.RetrieveMultiple(query).Entities.FirstOrDefault()?.ToEntityReference();
+        }
         public static EntityReference CreateEntityReferenceFromString(string value)
         {
             // 0  1                                     2                                    
@@ -140,6 +147,20 @@ namespace MCA.MgS.D365WorkflowSteps
             //  entityName =  sGetEntityNameFromCode(objectTypeCode, service);
             string objectId = urlParams[1].Replace("id=", "");
             return objectId;
+        }
+        public static string GetObjectTypeCode(string recordURL)
+        {
+
+            if (recordURL == null || recordURL == "")
+            {
+                return "";
+            }
+            string[] urlParts = recordURL.Split("?".ToArray());
+            string[] urlParams = urlParts[1].Split("&".ToCharArray());
+            string objectTypeCode = urlParams[0].Replace("etc=", "");
+            //  entityName =  sGetEntityNameFromCode(objectTypeCode, service);
+            string objectId = urlParams[1].Replace("id=", "");
+            return objectTypeCode;
         }
 
         public static Entity GetEntityByUsingFetch(IOrganizationService service, string entityName, string filter, string fetchFilters, string orderBy)
