@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk.Query;
 using Microsoft.Xrm.Sdk.Workflow;
+using System.Collections.Generic;
 
 namespace MCA.MgS.D365WorkflowSteps
 {
@@ -39,9 +40,29 @@ namespace MCA.MgS.D365WorkflowSteps
             get;
             set;
         }
-        [Input("Regarding URL")]
+
+        [Input("Regarding ID")]
+        public InArgument<string> RegardingId
+        {
+            get;
+            set;
+        }
+        [Input("Regarding Entity")]
+        public InArgument<string> RegardingEntity
+        {
+            get;
+            set;
+        }
+        [Input("Send Email?")]
         [RequiredArgument]
-        public InArgument<string> Regarding
+        public InArgument<bool> SendEmail
+        {
+            get;
+            set;
+        }
+
+        [Output("EmailID")]
+        public OutArgument<string> EmailID
         {
             get;
             set;
@@ -61,40 +82,77 @@ namespace MCA.MgS.D365WorkflowSteps
                 var subject = Subject.Get(executionContext);
                 var message = Message.Get(executionContext);
                 var recipients = Recipients.Get(executionContext).Split(new char[] { ',' }).ToList();
-                var regarding = CrmUtility.GetRecordID(Regarding.Get(executionContext));
+                var regardingId = RegardingId.Get(executionContext);
+                var regardingEntity = RegardingEntity.Get(executionContext);
+                var regarding = new EntityReference();
                 var sender = Sender.Get(executionContext);
                 var htmlTemplate = $"" + message;
+                var sendEmail = SendEmail.Get(executionContext);
 
+                if (regardingId != null && regardingEntity != null) {
+                    regarding = new EntityReference(regardingEntity, Guid.Parse(regardingId));
+                }
+
+                var parties = new List<Entity>();
 
                 foreach (var user in recipients)
                 {
-                    var fromActivityParty = new Entity("activityparty");
                     var toActivityParty = new Entity("activityparty");
-
-                    fromActivityParty["partyid"] = CrmUtility.GetCrmUser(crmService, sender);
-                    toActivityParty["partyid"] = CrmUtility.GetCrmUser(crmService, user);
-
-                    var email = new Entity("email")
+                    var toQuery = new QueryByAttribute("systemuser");
+                    toQuery.AddAttributeValue("internalemailaddress", user);
+                    var toResults = crmService.RetrieveMultiple(toQuery).Entities;
+                    if (toResults.Count > 0)
                     {
-                        ["from"] = new[] { fromActivityParty },
-                        ["to"] = new[] { toActivityParty },
-                        ["regardingobjectid"] = null,
-                        ["subject"] = $"" + subject,
-                        ["description"] = htmlTemplate,
-                        ["directioncode"] = true
-                    };
+                        toActivityParty["partyid"] = toResults.FirstOrDefault().ToEntityReference();
+                        parties.Add(toActivityParty);
+                    }
+                }
 
-                    var emailId = crmService.Create(email);
+                foreach (var contact in recipients)
+                {
+                    var toActivityParty = new Entity("activityparty");
+                    var toQuery = new QueryByAttribute("contact");
+                    toQuery.AddAttributeValue("emailaddress1", contact);
+                    var toResults = crmService.RetrieveMultiple(toQuery).Entities;
+                    if (toResults.Count > 0)
+                    {
+                        toActivityParty["partyid"] = toResults.FirstOrDefault().ToEntityReference();
+                        parties.Add(toActivityParty);
+                    }
+                }
 
+                var fromActivityParty = new Entity("activityparty");
+                fromActivityParty["partyid"] = CrmUtility.GetCrmUser(crmService, sender);
+
+                var email = new Entity("email")
+                {
+                    ["from"] = new[] { fromActivityParty },
+                    ["to"] = parties.ToArray(),
+                    ["regardingobjectid"] = null,
+                    ["subject"] = $"" + subject,
+                    ["description"] = htmlTemplate,
+                    ["directioncode"] = true
+                };
+
+                if (!string.IsNullOrEmpty(regardingId) && !string.IsNullOrEmpty(regardingId))
+                {
+                    email["regardingobjectid"] = regarding;
+                }
+
+                var emailId = crmService.Create(email);
+
+                if (sendEmail == true)
+                {
                     var sendEmailRequest = new SendEmailRequest
                     {
                         EmailId = emailId,
                         TrackingToken = string.Empty,
                         IssueSend = true
                     };
-
                     var sendEmailResponse = (SendEmailResponse)crmService.Execute(sendEmailRequest);
                 }
+
+                EmailID.Set(executionContext, Convert.ToString(emailId));
 
             }
             catch (Exception ex)

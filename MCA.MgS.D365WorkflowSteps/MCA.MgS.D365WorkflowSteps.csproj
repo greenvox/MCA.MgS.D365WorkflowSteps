@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tools\API\D365ACF4CallApi.cs" />
+    <Compile Include="Tools\API\D365ACF3RefreshToken.cs" />
+    <Compile Include="Tools\API\D365ACF2AccessToken.cs" />
+    <Compile Include="Tools\API\D365ACF1GetToken.cs" />
+    <Compile Include="Tools\Audit\ExportAuditDetails.cs" />
     <Compile Include="Tools\ToolsWorkflow\ConvertBase64ToUTF8.cs" />
     <Compile Include="Tools\Audit\GetAuditDetail.cs" />
     <Compile Include="Tools\ToolsWorkflow\GetFileParts.cs" />
@@ -86,7 +91,9 @@
     <Compile Include="SupportingClasses\SharePointUtility.cs" />
     <Compile Include="SupportingClasses\Utility.cs" />
     <Compile Include="SupportingClasses\WorkflowContextExtensions.cs" />
+    <Compile Include="Tools\ToolsWorkflow\MergeRecords.cs" />
     <Compile Include="Tools\ToolsWorkflow\PostUserTag.cs" />
+    <Compile Include="Tools\ToolsWorkflow\SendEmailToRecord.cs" />
     <Compile Include="Tools\ToolsWorkflow\SendCustomEmail.cs" />
   </ItemGroup>
   <ItemGroup>

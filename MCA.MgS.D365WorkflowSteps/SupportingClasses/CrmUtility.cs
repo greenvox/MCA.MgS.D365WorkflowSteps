@@ -29,6 +29,7 @@ namespace MCA.MgS.D365WorkflowSteps
 
             return service.RetrieveMultiple(query).Entities.FirstOrDefault()?.ToEntityReference();
         }
+
         public static EntityReference CreateEntityReferenceFromString(string value)
         {
             // 0  1                                     2                                    
