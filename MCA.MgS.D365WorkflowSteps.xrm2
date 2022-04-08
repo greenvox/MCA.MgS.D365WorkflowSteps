@@ -3,12 +3,12 @@
     {
       "ConnectionProtocol": 0,
       "HomeRealmUrl": "",
-      "OAuthAzureAppId": "",
-      "OAuthAzureReplyUrl": "",
-      "OrganizationDisplayName": "MCA Connect CRM DEV",
+      "OAuthAzureAppId": "51f81489-12ee-4a9e-aaae-a2591f45987d",
+      "OAuthAzureReplyUrl": "app://58145b91-0c36-4500-8554-080854f2ac97",
+      "OrganizationDisplayName": "MCA Connect CE DEV",
       "OrganizationName": "org3c41e74b",
       "OrganizationUrl": "https://mcaconnectdev.crm.dynamics.com",
-      "OrganizationVersion": "9.2.21043.134",
+      "OrganizationVersion": "9.2.22024.150",
       "UserFriendlyName": "https://mcaconnectdev.crm.dynamics.com",
       "CurrentSolution": {
         "Id": "f84de673-c51f-eb11-a813-000d3a5465d8",
@@ -20,6 +20,17 @@
         {
           "Name": "MCA.MgS.D365WorkflowSteps.csproj",
           "Files": [
+            {
+              "CrmId": "70816501-edb9-4740-a16c-6a5efbc05d84",
+              "EntityLogicalName": "account",
+              "FileType": 18,
+              "RelativeFilePath": "\\SupportingClasses\\MyOrganizationCrmSdkTypes.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 27,
+              "RelativeFilePath": "\\SupportingClasses\\MyOrganizationCrmSdkTypes.cs"
+            },
             {
               "CrmId": "00000000-0000-0000-0000-000000000000",
               "FileType": 26,
@@ -33,15 +44,16 @@
               "Config": {
                 "Id": "196dc97f-525f-eb11-a812-000d3a8e0b27",
                 "IsolationMode": 2,
-                "IsRegisteredInCrm": false,
+                "IsRegisteredInCrm": true,
                 "SourceType": 0,
                 "PluginTypeConfigs": [
                   {
-                    "DisplayName": "MCA.MgS.D365WorkflowSteps.PostUserTag",
-                    "Id": "f83f09d3-d0e2-4e7b-ba9d-d2448c44c4fe",
+                    "DisplayName": "Send Custom Email to Users",
+                    "Id": "a266e4fb-1cbf-eb11-8236-000d3a571d74",
                     "IsWorkflow": true,
-                    "Name": "MCA.MgS.D365WorkflowSteps.PostUserTag",
-                    "TypeName": "MCA.MgS.D365WorkflowSteps.PostUserTag"
+                    "Name": "Send Custom Email to Users",
+                    "TypeName": "MCA.MgS.D365WorkflowSteps.SendCustomEmail",
+                    "WorkflowActivityGroupName": "MCA MGS Workflow Tools"
                   }
                 ]
               }
