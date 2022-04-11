@@ -160,9 +160,7 @@ namespace MCA.MgS.D365WorkflowSteps
         public static bool IsRelationship(this IWorkflowContext context, string relationshipName)
         {
             var relationship = context.GetRelationship();
-
             return relationship != null && relationship.SchemaName.Equals(relationshipName, StringComparison.InvariantCultureIgnoreCase);
         }
-
     }
 }
