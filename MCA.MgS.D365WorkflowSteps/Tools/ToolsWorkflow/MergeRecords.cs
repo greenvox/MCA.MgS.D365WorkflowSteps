@@ -8,12 +8,20 @@ using Microsoft.Crm.Sdk.Messages;
 
 namespace MCA.MgS.D365WorkflowSteps
 {
-    class MergeRecord : CodeActivity
+    public class MergeRecords : CodeActivity
     {
-        [RequiredArgument] [Input("Master Record Id")] public InArgument<string> MasterId { get; set; }
-        [RequiredArgument] [Input("Slave Record Id")] public InArgument<string> SlaveId { get; set; }
-        [RequiredArgument] [Input("Entity Name")] public InArgument<string> EntityName { get; set; }
-        [RequiredArgument] [Input("Enrich Master Record?")] public InArgument<bool> EnrichMaster { get; set; }
+        [RequiredArgument]
+        [Input("Master Record Id")]
+        public InArgument<string> MasterId { get; set; }
+        [RequiredArgument]
+        [Input("Slave Record Id")]
+        public InArgument<string> SlaveId { get; set; }
+        [RequiredArgument]
+        [Input("Entity Name")]
+        public InArgument<string> EntityName { get; set; }
+        [RequiredArgument]
+        [Input("Enrich Master Record?")]
+        public InArgument<bool> EnrichMaster { get; set; }
 
 
         protected override void Execute(CodeActivityContext context)

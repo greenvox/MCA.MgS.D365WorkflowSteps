@@ -8,7 +8,7 @@
       "OrganizationDisplayName": "MCA Connect CE DEV",
       "OrganizationName": "org3c41e74b",
       "OrganizationUrl": "https://mcaconnectdev.crm.dynamics.com",
-      "OrganizationVersion": "9.2.22031.144",
+      "OrganizationVersion": "9.2.22061.180",
       "UserFriendlyName": "https://mcaconnectdev.crm.dynamics.com",
       "CurrentSolution": {
         "Id": "f84de673-c51f-eb11-a813-000d3a5465d8",
@@ -35,7 +35,31 @@
               "CrmId": "00000000-0000-0000-0000-000000000000",
               "FileType": 26,
               "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\DateTime\\GetDateParts.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\CloneRecord.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\MergeRecords.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
               "RelativeFilePath": "\\Tools\\ToolsWorkflow\\PostUserTag.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\SetBookingStartHour.cs"
             }
           ],
           "Properties": [
@@ -45,15 +69,36 @@
                 "Id": "196dc97f-525f-eb11-a812-000d3a8e0b27",
                 "IsolationMode": 2,
                 "IsRegisteredInCrm": true,
+                "PathNameOnServer": "MCA.MgS.D365WorkflowSteps.dll",
                 "SourceType": 0,
                 "PluginTypeConfigs": [
                   {
-                    "DisplayName": "Send Custom Email to Users",
-                    "Id": "a266e4fb-1cbf-eb11-8236-000d3a571d74",
-                    "IsWorkflow": true,
-                    "Name": "Send Custom Email to Users",
-                    "TypeName": "MCA.MgS.D365WorkflowSteps.SendCustomEmail",
-                    "WorkflowActivityGroupName": "MCA MGS Workflow Tools"
+                    "DisplayName": "Merge Record",
+                    "Id": "1e857b2b-2533-4d0e-aa68-b000b7bbf385",
+                    "IsWorkflow": false,
+                    "Name": "Merge Record",
+                    "TypeName": "MCA.MgS.D365WorkflowSteps.MergeRecords"
+                  },
+                  {
+                    "DisplayName": "MCA.MgS.D365WorkflowSteps.MergeRecord",
+                    "Id": "08c39a31-07ac-41e3-9f5e-bc6ae1dce174",
+                    "IsWorkflow": false,
+                    "Name": "MCA.MgS.D365WorkflowSteps.MergeRecord",
+                    "TypeName": "MCA.MgS.D365WorkflowSteps.MergeRecords"
+                  },
+                  {
+                    "DisplayName": "Merge Two Records",
+                    "Id": "286e37e9-1d8b-4072-8fef-7762f99d89e3",
+                    "IsWorkflow": false,
+                    "Name": "Merge Two Records",
+                    "TypeName": "MCA.MgS.D365WorkflowSteps.MergeRecords"
+                  },
+                  {
+                    "DisplayName": "Merge Records",
+                    "Id": "8adccc5c-a86d-479a-b22d-77fd6c4797e0",
+                    "IsWorkflow": false,
+                    "Name": "Merge Records",
+                    "TypeName": "MCA.MgS.D365WorkflowSteps.MergeRecords"
                   }
                 ]
               }
@@ -103,6 +148,10 @@
           "ServiceContextName": "CrmServiceContext",
           "SettingType": 4,
           "UseStronglyTypedNameForProxyRelatedEntities": true
+        },
+        {
+          "PluginStepNameTemplate": "{messageDisplayName} - {primaryEntityDisplayName} - {pipelineStageDisplayName}",
+          "SettingType": 1
         }
       ]
     }

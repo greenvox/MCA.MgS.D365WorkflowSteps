@@ -47,6 +47,8 @@
     <Compile Include="Tools\API\D365ACF2AccessToken.cs" />
     <Compile Include="Tools\API\D365ACF1GetToken.cs" />
     <Compile Include="Tools\Audit\ExportAuditDetails.cs" />
+    <Compile Include="Tools\DateTime\GetDateParts.cs" />
+    <Compile Include="Tools\ToolsWorkflow\CloneRecord.cs" />
     <Compile Include="Tools\ToolsWorkflow\ConvertBase64ToUTF8.cs" />
     <Compile Include="Tools\Audit\GetAuditDetail.cs" />
     <Compile Include="Tools\ToolsWorkflow\GetFileParts.cs" />
@@ -95,13 +97,14 @@
     <Compile Include="Tools\ToolsWorkflow\PostUserTag.cs" />
     <Compile Include="Tools\ToolsWorkflow\SendEmailToRecord.cs" />
     <Compile Include="Tools\ToolsWorkflow\SendCustomEmail.cs" />
+    <Compile Include="Tools\ToolsWorkflow\SetBookingStartHour.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies">
       <Version>9.0.2.42</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.CrmSdk.XrmTooling.CoreAssembly">
-      <Version>9.1.0.51</Version>
+      <Version>9.1.0.108</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

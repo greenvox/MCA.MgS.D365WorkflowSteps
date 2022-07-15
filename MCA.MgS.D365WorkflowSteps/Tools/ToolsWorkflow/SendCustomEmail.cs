@@ -103,8 +103,14 @@ namespace MCA.MgS.D365WorkflowSteps
                     var toResults = crmService.RetrieveMultiple(toQuery).Entities;
                     if (toResults.Count > 0)
                     {
-                        toActivityParty["partyid"] = toResults.FirstOrDefault().ToEntityReference();
-                        parties.Add(toActivityParty);
+                        try {
+                            var userRef = toResults.FirstOrDefault().ToEntityReference();
+                            toActivityParty["partyid"] = userRef;
+                            parties.Add(toActivityParty);
+                        } catch (Exception ex)
+                        {
+                            tracingService.Trace(ex.Message);
+                        }
                     }
                 }
 
@@ -116,13 +122,24 @@ namespace MCA.MgS.D365WorkflowSteps
                     var toResults = crmService.RetrieveMultiple(toQuery).Entities;
                     if (toResults.Count > 0)
                     {
-                        toActivityParty["partyid"] = toResults.FirstOrDefault().ToEntityReference();
-                        parties.Add(toActivityParty);
+                        try { 
+                            var contactRef = toResults.FirstOrDefault().ToEntityReference();
+                            toActivityParty["partyid"] = contactRef;
+                            parties.Add(toActivityParty);
+                        } catch (Exception ex)
+                        {
+                            tracingService.Trace(ex.Message);
+                        }
                     }
                 }
 
                 var fromActivityParty = new Entity("activityparty");
+                try { 
                 fromActivityParty["partyid"] = CrmUtility.GetCrmUser(crmService, sender);
+                } catch (Exception ex)
+                {
+                    tracingService.Trace(ex.Message);
+                }
 
                 var email = new Entity("email")
                 {
