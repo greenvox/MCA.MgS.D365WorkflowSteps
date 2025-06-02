@@ -46,6 +46,8 @@
     <Compile Include="Tools\API\D365ACF3RefreshToken.cs" />
     <Compile Include="Tools\API\D365ACF2AccessToken.cs" />
     <Compile Include="Tools\API\D365ACF1GetToken.cs" />
+    <Compile Include="Tools\Array\ExtractNumbersOnly.cs" />
+    <Compile Include="Tools\Array\FindSmallestMissingInteger.cs" />
     <Compile Include="Tools\Audit\ExportAuditDetails.cs" />
     <Compile Include="Tools\DateTime\GetDateParts.cs" />
     <Compile Include="Tools\ToolsWorkflow\CloneRecord.cs" />
@@ -101,10 +103,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies">
-      <Version>9.0.2.42</Version>
+      <Version>9.0.2.59</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.CrmSdk.XrmTooling.CoreAssembly">
-      <Version>9.1.0.108</Version>
+      <Version>9.1.1.65</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
