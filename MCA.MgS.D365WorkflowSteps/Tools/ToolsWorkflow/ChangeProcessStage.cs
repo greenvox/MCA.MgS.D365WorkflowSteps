@@ -68,14 +68,6 @@ namespace MCA.MgS.D365WorkflowSteps
                 //Workflow
                 var workflow = service.Retrieve(bpf.LogicalName, bpf.Id, new ColumnSet("uniquename"));
                 var bpfName = workflow["uniquename"].ToString();
-                
-
-                //var qeWorkflow = new QueryExpression("workflow");
-                //qeWorkflow.ColumnSet.AddColumns("uniquename", "category", "type", "businessprocesstype");
-                //qeWorkflow.Criteria.AddCondition("name", ConditionOperator.Equal, bpf);
-                //qeWorkflow.Criteria.AddCondition("category", ConditionOperator.Equal, 4);
-                //var workflow = service.RetrieveMultiple(qeWorkflow).Entities.FirstOrDefault();
-                //var bpfName = workflow["uniquename"].ToString();
 
                 //Stage
                 var qeStage = new QueryExpression("processstage");
@@ -85,7 +77,8 @@ namespace MCA.MgS.D365WorkflowSteps
                 var stage = service.RetrieveMultiple(qeStage).Entities.FirstOrDefault();
 
                 var bpfRelatedLookupName = recEntityIdName;
-                if (bpfName.StartsWith("bpf_") || bpfName.Contains("bpf_")) bpfRelatedLookupName = "bpf_" + recEntityIdName;
+                //if (bpfName.StartsWith("bpf_") || bpfName.Contains("bpf_")) bpfRelatedLookupName = "bpf_" + recEntityIdName;
+                if (bpfName[3] == '_') bpfRelatedLookupName = "bpf_" + recEntityIdName;
 
                 //BPF
                 var qeBPF = new QueryExpression(bpfName);
@@ -93,8 +86,8 @@ namespace MCA.MgS.D365WorkflowSteps
                 qeBPF.Criteria.AddCondition(bpfRelatedLookupName, ConditionOperator.Equal, record.Id);
                 qeBPF.Criteria.AddCondition("statecode", ConditionOperator.Equal, 0);
                 var process = service.RetrieveMultiple(qeBPF).Entities.FirstOrDefault();
-                ProcessId.Set(executionContext, process.Id);
-                ProcessName.Set(executionContext, process.LogicalName);
+                ProcessId.Set(executionContext, process.Id.ToString());
+                ProcessName.Set(executionContext, process.LogicalName.ToString());
                 var traversedPath = Convert.ToString(process["traversedpath"]);
 
                 if (backwards)

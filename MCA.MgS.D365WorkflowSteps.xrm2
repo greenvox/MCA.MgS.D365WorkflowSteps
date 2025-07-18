@@ -172,6 +172,329 @@
         "Name": "Default Solution",
         "UniqueName": "Default"
       },
+      "Projects": [
+        {
+          "Name": "MCA.MgS.D365WorkflowSteps.csproj",
+          "RemoveLinksToFilesThatDoNotExistOnDisk": true,
+          "Files": [
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\D365ACF1GetToken.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\D365ACF2AccessToken.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\D365ACF3RefreshToken.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\D365ACF4CallApi.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\GetJSONValueByPath.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\HTTPJsonWithCommonHeaders.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\HTTPJsonWithHeader.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\HTTPPostJson.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\HTTPPostJsonWithHeader.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\HTTPPutJson.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\PostDocuSignRestAPI.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\SharePointFormDigestAuth.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\API\\SharePointUploadFile.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\Array\\ExtractNumbersOnly.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\Array\\FindSmallestMissingInteger.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\Audit\\ExportAuditDetails.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\Audit\\GetAuditDetail.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\DateTime\\GetDateParts.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsImport\\ImportNoteFile.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsImport\\ImportNoteFileToCrm.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsImport\\ImportParseAction.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsImport\\ImportRecordsAction.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsImport\\ImportTransformAction.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetAccountByAttribute.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetAccountByFetch.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetContactByAttribute.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetLeadByAttribute.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetNoteByAttribute.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetOpportunityByAttribute.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetOpportunityClose.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetOpportunityProductByAttribute.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetProductByAttribute.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetSingleValueByFetch.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetStringByValue.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsSearch\\GetUserByAttribute.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\AssociateOptionSetValue.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\ChangeProcessStage.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\CloneRecord.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\ConvertBase64ToUTF8.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\EmailUserOnPostMention.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\FileUpload.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\GetFileParts.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\GetNoteParts.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\GetUsersOnPostMention.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\MergeRecords.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\PostUserTag.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\SendCustomEmail.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\SendEmailToRecord.cs"
+            },
+            {
+              "CrmId": "00000000-0000-0000-0000-000000000000",
+              "FileType": 26,
+              "IsWorkflow": true,
+              "RelativeFilePath": "\\Tools\\ToolsWorkflow\\SetBookingStartHour.cs"
+            }
+          ],
+          "Properties": [
+            {
+              "PropertiesType": 1,
+              "Config": {
+                "Id": "58b6f8a3-cbb4-479a-8f96-9f5944acedba",
+                "IsolationMode": 2,
+                "IsRegisteredInCrm": true,
+                "PathNameOnServer": "MCA.MgS.D365WorkflowSteps.dll",
+                "SourceType": 0,
+                "PluginTypeConfigs": [
+                  {
+                    "DisplayName": "MCA.MgS.D365WorkflowSteps.ConvertBase64ToUTF8",
+                    "Id": "000fd415-909f-4a84-ae0e-2ee5ba137170",
+                    "IsWorkflow": true,
+                    "Name": "MCA.MgS.D365WorkflowSteps.ConvertBase64ToUTF8",
+                    "TypeName": "MCA.MgS.D365WorkflowSteps.ConvertBase64ToUTF8"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
       "Settings": [
         {
           "CssMinification": 1,
@@ -220,6 +543,10 @@
           "ViewPath": "\\Views",
           "XmlPath": "\\Web",
           "XslPath": "\\Web"
+        },
+        {
+          "PluginStepNameTemplate": "{messageDisplayName} - {primaryEntityDisplayName} - {pipelineStageDisplayName}",
+          "SettingType": 1
         }
       ]
     }
